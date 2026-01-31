@@ -6,8 +6,8 @@ import landscapeImg from '../assets/landscape.jpg';
 const Hero = () => {
     return (
         <section id="hero" className="relative min-h-screen w-full overflow-hidden">
-            {/* Background Image Container - Fixed for Desktop, Absolute for Mobile */}
-            <div className="absolute lg:fixed inset-0 z-0 pointer-events-none bg-black">
+            {/* Background Image Container - Fixed for both to stay in place while scrolling */}
+            <div className="fixed inset-0 z-0 pointer-events-none bg-black">
                 {/* Mobile Portrait Image */}
                 <motion.img
                     initial={{ scale: 1.2, opacity: 0 }}

@@ -17,45 +17,45 @@ function App() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-slate-50 font-sans selection:bg-slate-200 overflow-x-hidden">
-            <Navbar />
-
-            {/* Background Decorative Elements - Removed to keep it clean/black */}
+        <div className="min-h-screen bg-slate-50 font-sans selection:bg-slate-200 overflow-x-hidden relative">
+            {/* Background Decorative Elements */}
             <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
                 <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-slate-200/5 blur-[150px] rounded-full"></div>
             </div>
 
-            <main className="relative z-0 w-full max-w-7xl mx-auto lg:shadow-2xl">
+            <main className="relative w-full max-w-7xl mx-auto lg:shadow-2xl bg-white min-h-screen">
                 <Hero />
 
-                <div className="relative z-10 max-w-6xl mx-auto bg-white">
-                    <div id="about" className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-stretch">
+                <div className="relative z-10 max-w-7xl mx-auto bg-white">
+                    <div id="about" className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-stretch scroll-mt-24">
                         <About />
                         <Skills />
                     </div>
 
-                    <div id="experience">
+                    <div id="experience" className="scroll-mt-24">
                         <Experience />
                     </div>
 
-                    <div id="projects" className="bg-white">
+                    <div id="projects" className="bg-white scroll-mt-24">
                         <Projects />
                     </div>
 
-                    <div id="education" className="bg-slate-50">
+                    <div id="education" className="bg-slate-50 scroll-mt-24">
                         <Education />
                     </div>
 
-                    <div id="services">
+                    <div id="services" className="scroll-mt-24">
                         <Services />
                     </div>
                 </div>
 
                 <div className="relative z-10 bg-white">
-                    <div id="interests">
+                    <div id="interests" className="scroll-mt-24">
                         <Interests />
                     </div>
-                    <ContactSection />
+                    <div id="contact" className="scroll-mt-24">
+                        <ContactSection />
+                    </div>
                 </div>
 
                 {/* Minimal Bottom Space */}
@@ -63,6 +63,8 @@ function App() {
                     <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">&copy; 2026 S. Jothiswaran</p>
                 </div>
             </main>
+
+            <Navbar />
         </div>
     );
 }

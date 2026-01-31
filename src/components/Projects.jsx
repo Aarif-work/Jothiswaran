@@ -36,7 +36,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative bg-[#F8FAFC] rounded-[3rem] overflow-hidden border border-slate-100 shadow-2xl shadow-slate-200/60 w-full lg:max-w-5xl"
+                            className="group relative bg-[#F8FAFC] rounded-[3rem] overflow-hidden border border-slate-100 shadow-2xl shadow-slate-200/60 w-full lg:max-w-full"
                         >
                             {/* Header Accent */}
                             <div className={`h-3 w-full bg-gradient-to-r ${project.color}`}></div>
@@ -83,15 +83,15 @@ const Projects = () => {
                                     <p className="text-xs text-slate-300 leading-relaxed italic">"{project.roleDesc}"</p>
                                 </div>
 
-                                <div className="flex items-center justify-between pt-6 border-t border-slate-100">
-                                    <div className="flex gap-3">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-6 border-t border-slate-100">
+                                    <div className="flex flex-wrap gap-2">
                                         {project.tags.map(tag => (
                                             <span key={tag} className="text-[10px] font-black text-slate-400 bg-slate-100 px-3 py-1.5 rounded-full uppercase tracking-widest">
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
-                                    <div className="flex gap-4">
+                                    <div className="flex gap-4 self-end sm:self-auto">
                                         <button className="p-3 bg-white text-slate-400 hover:text-primary-500 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
                                             <Github size={20} />
                                         </button>
